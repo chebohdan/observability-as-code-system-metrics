@@ -7,9 +7,8 @@ A service that automatically builds and uploads programmatically created Grafana
 2. [Features](#features)  
 3. [Technology](#technology)  
 4. [Prerequisites](#prerequisites)  
-5. [Setup and Usage](#setup-and-usage)  
-6. [Access](#access)  
-7. [License](#license)  
+5. [Setup](#setup)  
+6. [Usage](#usage)  
 
 ## Overview
 System Metrics Exporter programmatically creates Grafana dashboards and uploads them on application start. It displays system metrics such as CPU and integrates with Prometheus for metric collection.
