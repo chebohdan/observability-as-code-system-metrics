@@ -15,7 +15,7 @@ System Metrics Exporter programmatically creates Grafana dashboards and uploads 
 
 ## Features
 - Builds Grafana dashboards using code  
-- Automatically uploads dashboards to Grafana on start  
+- On startup, dashboards are automatically uploaded to Grafana using HTTP requests through the Grafana API 
 - Monitors system metrics: CPU
 
 ## Technology
