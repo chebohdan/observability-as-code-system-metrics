@@ -17,8 +17,7 @@ System Metrics Exporter programmatically creates Grafana dashboards and uploads 
 ## Features
 - Builds Grafana dashboards using code  
 - Automatically uploads dashboards to Grafana on start  
-- Monitors system metrics: CPU, memory, disk  
-- Works with Prometheus data sources  
+- Monitors system metrics: CPU
 
 ## Technology
 - Java 17  
