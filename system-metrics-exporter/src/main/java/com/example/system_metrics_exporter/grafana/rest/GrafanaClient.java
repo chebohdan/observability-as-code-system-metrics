@@ -15,7 +15,7 @@ public class GrafanaClient {
     private final String grafanaUrl;
 
     public GrafanaClient( @Value("${grafana.api.url}") String grafanaUrl,
-                          @Value("${grafana.api.key}") String apiKey) {
+                          @Value("${grafana.api.token}") String apiKey) {
         this.restTemplate = new RestTemplate();
         this.grafanaUrl = grafanaUrl;
         this.headers = new HttpHeaders();
