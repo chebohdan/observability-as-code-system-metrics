@@ -1,11 +1,4 @@
 services:
-  smtp:
-    image: ixdotai/smtp:v0.7.6
-    container_name: smtp
-    ports:
-      - 127.0.0.1:25:25
-    env_file:
-      - ./environments/smtp.env
   postgres:
     image: postgres:17
     container_name: postgres
@@ -41,6 +34,18 @@ services:
       - --config.file=/etc/prometheus/prometheus.yml
     ports:
       - "9090:9090"
+  system-metrics-exporter:
+    build: 
+        context: ./system-metrics-exporter
+        dockerfile: Dockerfile
+    container_name: system-metrics-exporter
+    ports:
+      - "8080:8080"
+    environment:
+      - GRAFANA_API_URL=http://grafana:3000/api/dashboards/db
+      - GRAFANA_API_TOKEN=sa-1-grafana-service-f77c1162-f52f-4669-861c-70ebe9bc8152
+    depends_on:
+      - grafana
   alertmanager:
     image: prom/alertmanager:v0.28.1
     container_name: alertmanager
