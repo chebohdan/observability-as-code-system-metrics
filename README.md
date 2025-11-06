@@ -1,21 +1,40 @@
 # System Metrics Exporter
 
-A simple Spring Boot app that creates and uploads Grafana dashboards automatically.
+A service that automatically builds and uploads programmatically created Grafana dashboards to visualize system metrics.
 
-## What it does
-- Builds Grafana dashboards using code
-- Sends them to Grafana on app start
-- Shows system metrics like CPU, memory, and disk
-- Works with Prometheus data
+## Table of Contents
+1. [Overview](#overview)  
+2. [Features](#features)  
+3. [Technology](#technology)  
+4. [Prerequisites](#prerequisites)  
+5. [Setup and Usage](#setup-and-usage)  
+6. [Access](#access)  
+7. [License](#license)  
 
-## Tech used
+## Overview
+System Metrics Exporter programmatically creates Grafana dashboards and uploads them on application start. It displays system metrics such as CPU, memory, and disk usage, and integrates with Prometheus for metric collection.
+
+## Features
+- Builds Grafana dashboards using code  
+- Automatically uploads dashboards to Grafana on start  
+- Monitors system metrics: CPU, memory, disk  
+- Works with Prometheus data sources  
+
+## Technology
 - Java 17  
-- Spring Boot  
+- Spring Boot
+- Micrometer
 - Grafana Dashboard Builder  
 - Prometheus  
-- Jackson (JSON)
 
-## How to run
-1. Set your Grafana URL and API key in `application.properties`
-2. Start the app  
-3. Dashboards will appear in Grafana
+## Prerequisites
+- Docker  
+
+## Setup
+Run the system using Docker Compose:  
+```bash
+docker compose up -d --build
+```
+
+## Usage
+You can then access Grafana on localhost:3000
