@@ -12,7 +12,7 @@ A service that automatically builds and uploads programmatically created Grafana
 7. [License](#license)  
 
 ## Overview
-System Metrics Exporter programmatically creates Grafana dashboards and uploads them on application start. It displays system metrics such as CPU, memory, and disk usage, and integrates with Prometheus for metric collection.
+System Metrics Exporter programmatically creates Grafana dashboards and uploads them on application start. It displays system metrics such as CPU and integrates with Prometheus for metric collection.
 
 ## Features
 - Builds Grafana dashboards using code  
@@ -36,4 +36,4 @@ docker compose up -d --build
 ```
 
 ## Usage
-You can then access Grafana on localhost:3000
+You can then access Grafana on http://localhost:3000
